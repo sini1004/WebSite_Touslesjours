@@ -1,0 +1,138 @@
+/* ////////// 1400px ////////// */
+@media (max-width:1400px){   
+
+}
+
+/* ////////// 1023px ////////// */
+@media (max-width:1023px){   
+  /* .br {
+    display: inline;
+  } */
+  /* event_list */
+  .sub_menu {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 20px 0;
+  }
+  .Brand .sub_menu {
+    border: 0;
+  }
+  .event_list ul{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .event_list ul li{
+    flex-basis: calc(100% / 2 - 30px / 2);
+    border: 1px solid #e1e1e1;
+  }
+  .event_content .event_txt{
+    font-size: 21px;
+    height: 56px;
+  }
+  .event_content .event_date{
+    font-size: 18px;
+  }
+
+  /* brand story */
+  .brand_title {
+    margin-top: 60px;
+  }
+  .brand_txt {
+    font-family: 'Roboto Serif', serif;
+    font-size: 70px;
+    text-shadow: 7px 5px 13px rgba(0,0,0,0.3);
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: -5px;
+  }
+  .story01 {
+    display: block;
+    gap: 60px;
+  }
+  .story01_1, .story01_2 {
+    width: 100%;
+  }
+  .story01_1_txt {
+    width: 80%;
+  }
+  .story01_1_txt h3 {
+    font-size: 42px;
+  }
+  .story01_1_txt p{
+    font-size: 16px;
+  } 
+  .story01_2 img {
+    margin-top: 80px;
+  }
+}
+
+/* ////////// 768px ////////// */
+@media (max-width:768px){   
+  /* common */
+  .br {
+    display: inline;
+  }
+  .subMenu {
+    padding: 125px 0 50px;
+  }
+  .sub_menu li a {
+    font-size: 13px;
+  }
+
+  /* event_list */
+  .event_list ul{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .event_list ul li{
+    flex-basis: calc(100% / 2 - 10px / 2);
+    border: 1px solid #e1e1e1;
+  }
+  .event_content .event_txt{
+    font-size: 18px;
+    height: 48px;
+  }
+  .event_content .event_date{
+    font-size: 16px;
+  }
+  .Brand {
+    margin-top: 60px;
+    padding: 65px 0 50px;
+  }
+  .sub_menu li {
+    margin: 0 10px;
+  }
+  .Brand .sub_menu li {
+    margin: 0 10px;
+  }
+  .story01_1_txt h3 {
+    font-size: 38px;
+  }
+  .brand_txt {
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  .Brand .brand_img {
+    left: calc(50% - 100px);
+    transform: translateY(10px);
+  }
+  .Brand .roll {
+    transform: translateY(160px);
+  }
+  .Brand .brand_img img {
+    width: 200px;
+  }
+}
+
+
+/* ////////// 470px ////////// */
+@media (max-width:470px){   
+  .event_list ul li {
+    flex-basis: calc(96%  - 10px);
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,241 @@
+/* header */
+#header {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 9999;
+  box-sizing: border-box;   
+  border-bottom: 1px solid #eeeeee;
+}
+
+.active{
+  background-color: #fff;
+  color: #222;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  border-bottom: 0px;
+  box-shadow: 10px 0 15px 0 rgb(0, 0, 0, .1);
+  -webkit-transition-duration:0.4s;
+  -webkit-transition-timing-function:ease;
+}
+.deactive{
+  background-color: #fff;
+  color: #fff;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  -webkit-transition-duration:0.4s;
+  -webkit-transition-timing-function:ease;
+}
+.deactive-c {
+  color: #000;
+}
+
+.logoc {
+  width: 125px;
+  height: 34px;
+  /* background-image: url(../img/logo.png); */
+  background-size: cover;
+  font-size: 0;
+}
+
+#header nav ul li {
+  display: inline-block;
+  /*! padding: 0 25px; */
+}
+#header .logo {
+  width: 125px;
+  height: 34px;
+  background-size: 100% auto;
+  font-size: 0;
+}
+#header nav ul li a {
+  font-weight: 600;
+  color: #0d4633;
+}
+
+#header nav ul li{  
+  position: relative;
+}
+#header nav ul li a {  
+  font-weight: 600;
+  display: block;
+  position: relative;
+  color: #0d4633;
+  padding: 0 30px;
+}
+#header nav ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: all 0.5s;  
+}
+#header nav ul li a:hover::after {
+  content: "";
+  display: block;
+  position:absolute;
+  width: calc(100% - 58px);
+  height: 2px;
+  background-color: #0d4633;
+  transform: translateY(7px) scaleX(100%);
+}
+
+#header .hamburger-button {
+  display: none;
+}
+
+.ham-active{
+  background-color: transparent;
+}
+.hamburger-button {
+  position: relative;
+  transition: .3s ease-in-out;
+  width: 30px;
+  height: 24px;
+  z-index: 999;
+}
+.hamburger-button span{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #0d4633;
+  top: 0;
+  transition: .2s;
+}
+.hamburger-button.ham-active span {
+  background-color: #222;
+}
+.hamburger-button span:nth-child(1){
+  top: 0;
+}
+.hamburger-button span:nth-child(2),
+.hamburger-button span:nth-child(3){
+  top: 11px;
+}
+.hamburger-button span:nth-child(4){
+  top: 23px;
+}
+.hamburger-button.ham-active span:nth-child(1),
+.hamburger-button.ham-active span:nth-child(4){
+  opacity: 0;
+}
+.hamburger-button.ham-active span:nth-child(2){
+  transform: rotate(45deg);
+}
+.hamburger-button.ham-active span:nth-child(3){
+  transform: rotate(-45deg);
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s;
+}
+.overlay.visible{
+  width:100%;
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes fadeInRight{
+  0% { opacity: 0; transform: translateX(-25%);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+.overlay.visible li{
+  animation: fadeInLeft 0.4 ease forwards;
+}
+.overlay.visible li:nth-child(1){
+  animation-delay: 0.23s;
+}
+.overlay.visible li:nth-child(2){
+  animation-delay: 0.26s;
+}
+.overlay.visible li:nth-child(3){
+  animation-delay: 0.29s;
+}
+.overlay.visible li:nth-child(4){
+  animation-delay: 0.32s;
+}
+.overlay.visible li:nth-child(5){
+  animation-delay: 0.35s;
+}
+.overlay .menu {
+  width: 100%;
+}
+.overlay .menu ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.overlay .menu ul li > a {
+  font-size: 24px;
+  padding: 0 30px;
+  color: #222;
+}
+
+@media screen and (max-width:1280px){
+  /* header */
+  #header nav {
+    display: none;
+  }
+  #header .hamburger-button {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width:768px){
+  #header {
+    height: 60px;
+  }
+  #header .logo {
+    width: 130px;
+    height: 30px;
+    margin-top: 17px;
+  }
+  #header .logo img {
+    width: 100%;
+  }
+  #header .logoc {
+    width: 130px;
+    height: 30px;
+    margin-top: 17px;
+  }
+  #header .logoc img {
+    width: 100%;
+  }
+  #header nav {
+    display: none;
+  }
+
+  .hamburger-button {
+    width: 25px;
+    height: 20px;
+    margin-top: 4px;
+  }
+  .hamburger-button span:nth-child(2),
+  .hamburger-button span:nth-child(3){
+    top: 9px;
+  }
+  .hamburger-button span:nth-child(4){
+    top: 18px;
+  }
+}

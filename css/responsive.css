@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+
+/* ////////// 1439px ////////// */
+@media (max-width:1439px){
+  .con1, .con2 { 
+    width:100%;
+  }
+  .section2-title {
+    font-size: 32px;
+  }
+  .ft_br {
+    display: inline-block;
+  }
+  
+}
+
+/* ////////// 1023px ////////// */
+@media (max-width:1023px){  
+  /* section1 */
+  #section1 {
+    margin: 80px 0 40px;
+  }
+  /* section3 */
+  .section3_wrap {
+    display: block;
+    text-align: center;
+  }
+  .section3_txt {
+    margin-right: 0;
+  }
+  .section3_image {
+    transition: all 1s;
+    transform: scale(0.7);
+  }
+  .section3_image img {
+    width: 100%;
+  }
+
+  /* section4 */
+  #section4 {
+    margin-top: -90px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* common */
+  h2 {
+    font-size: 38px;
+  }
+  /*  */
+  .mainvideo {
+    margin-top: 60px;
+  }
+  /* section2 */
+  .swiper-container::after,
+  .swiper-container::before {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  /* section3 */
+  #section4 {
+    padding: 80px 0;
+  }
+  .section3_txt p {
+    font-size: 16px;
+    margin: 30px 0 40px 0;
+  }
+
+
+    /* section4 */
+  .instagram { 
+    width: 90%; 
+    padding-top: 80px;
+    margin: 0 auto;
+  }
+  .instagram li:nth-child(n+5):nth-child(-n+9) {
+    display: none;
+  }
+  .instagram li {
+    flex-basis: calc(100% / 2 - 30px / 2);
+  }
+
+
+  /* footer */
+  .info_wrap {
+    font-size: 14px;
+  }
+  .info01 span {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .info_link ul li {
+    padding: 5px 10px;
+  }
+  .info_sns ul li a {
+    font-size: 21px;
+  }
+}
+
+
+
+/* ////////// 360px ////////// */
+@media (max-width: 360px) {
+  /* common */
+  .ft_br {
+    display: block;
+  }
+
+  /* section1 */
+  .section1_wrap .swiper-slide .menu_itme {
+    width: 320px;
+    height: 320px;
+  }
+  .section1_wrap .swiper-slide img {
+    transform: scale(0.9);
+  }
+  .section1_wrap .swiper-slide .menu_itme:hover .menu_txt {
+    width: 320px;
+    height: 320px;
+  }
+  .menu_txt .txt01{
+    font-size: 32px;
+  }
+
+  /* section3 */
+  .section3_txt .br{
+    display: inline-block;
+  }
+
+  /* footer */
+  .info01 {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
